@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Navigation Bar with Curved Border</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="title">
+
+                <h3>Coding Boss</h3>
+            </div>
+            <div class="arrow">
+                
+                <i class="fa-solid fa-arrow-left">
+                    <span></span>
+                </i>
+               
+            </div>
+            <ul class="list">
+                <li class="active">
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-house-chimney"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+
+                <li >
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-solid fa-plane"></i>
+                        <span>Flights</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+
+                <li >
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span>Wallet</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+
+                <li >
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-sharp fa-solid fa-file"></i>
+                        <span>Reports</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+
+                <li >
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Statistics</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+
+
+                <li >
+                    <span class="top-curved"></span>
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                    <span class="bottom-curved"></span>
+                </li>
+
+            </ul>
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui cumque commodi quaerat odit deserunt cupiditate? Quia ducimus quam repudiandae dolores, ab dignissimos itaque ratione eos alias tempore et, maiores, nisi cumque iusto? Aliquam velit nostrum doloribus harum sed illum beatae deserunt labore. Nihil corrupti eum quam iusto sequi quis ratione fugiat itaque vitae, repudiandae earum eius dolor reiciendis exercitationem, saepe esse voluptates voluptate modi est qui? Autem magnam quasi possimus cum, quidem ex incidunt provident vero veniam sit doloremque dignissimos voluptatibus nesciunt impedit, repudiandae cumque sequi totam est aut officiis dolorem tenetur maxime corrupti. Qui unde similique nobis officiis minus.
+        </div>
+    </div>
+    <script>
+        const liItems = document.querySelectorAll('.list li');
+        const arrow = document.querySelector('.arrow i')
+        const sideBar = document.querySelector('.sidebar')
+        const container = document.querySelector('.container')
+        console.log(liItems, arrow, sideBar);
+        liItems.forEach(liMain =>{
+            liMain.onmouseover = () => {
+                liItems.forEach(li =>{
+                    li.classList.remove('active')
+                })
+
+                liMain.classList.add('active')
+            }
+        })
+        arrow.onclick = () => {
+            container.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
